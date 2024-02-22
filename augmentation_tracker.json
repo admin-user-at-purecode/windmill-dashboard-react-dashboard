@@ -1,0 +1,46 @@
+{
+    "theme_augmentations": {
+        "color": "red",
+        "font": "Arial",
+        "size": "12px",
+        "background": "white",
+        "border": "1px solid black",
+        "radius": "5px",
+        "shadow": "2px 2px 2px 2px #888888",
+    },  
+    "component_names":
+    [
+        "Header",
+        "Sidebar",
+        "PageTitle",
+        "ProjectStarCTA",
+        "InfoCard",
+        "Table",
+        "ChartCard"
+    ],
+    "component_counts":
+    {
+        "Header": 1,
+        "Sidebar": 1,
+        "PageTitle": 2,
+        "ProjectStarCTA": 1,
+        "InfoCard": 4,
+        "Table":1,
+        "ChartCard":2
+    },
+    "component_locations":   
+    {
+        "sidebar": "left of the page, sticky",
+        "header": "top of the page",
+        "PageTitle": "top left of the content page",
+        "ProjectStarCTA": "top below pagetitle takes full width of the center section",
+        "InfoCard": "top below projectstarcta takes full width of the center section",
+        "Table": "mid of the center section takes full width of it",
+        "ChartCard1": "bottom left of the center section takes 1/2 width",
+        "ChartCard2": "bottom right of the center section takes 1/2 width"
+    },
+    "functionality":
+    {
+        "table_pagination": "a feature that allows the table to be paginated"
+    }
+}

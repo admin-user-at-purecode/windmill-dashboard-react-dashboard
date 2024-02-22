@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import InfoCard, { CTA } from '../../components/cards/InfoCard'
+import InfoCard, { ProjectStarCTA } from '../../components/cards/InfoCard'
 import ChartCard, { ChartLegend } from '../../components/chart/ChartCard'
 import { Doughnut, Line } from 'react-chartjs-2'
 import PageTitle, { RoundIcon } from '../../components/common/PageTitle'
@@ -49,7 +49,7 @@ function Dashboard() {
     <>
       <PageTitle>Dashboard</PageTitle>
 
-      <CTA />
+      <ProjectStarCTA />
 
       {/* <!-- Cards --> */}
       <div className="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
