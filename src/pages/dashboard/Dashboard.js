@@ -3,10 +3,9 @@ import React, { useState, useEffect } from 'react'
 import InfoCard, { CTA } from '../../components/cards/InfoCard'
 import ChartCard, { ChartLegend } from '../../components/chart/ChartCard'
 import { Doughnut, Line } from 'react-chartjs-2'
-import PageTitle from '../../components/PageTitle'
+import PageTitle, { RoundIcon } from '../../components/common/PageTitle'
 import { ChatIcon, CartIcon, MoneyIcon, PeopleIcon } from '../../assets/icons'
-import RoundIcon from '../../components/RoundIcon'
-import response from '../../utils/tableData'
+import response from '../../mock_data/tableData'
 import {
   TableBody,
   TableContainer,
@@ -25,7 +24,7 @@ import {
   lineOptions,
   doughnutLegends,
   lineLegends,
-} from '../../utils/chartsData'
+} from '../../mock_data/chartsData'
 
 function Dashboard() {
   const [page, setPage] = useState(1)
