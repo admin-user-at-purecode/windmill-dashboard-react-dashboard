@@ -34,10 +34,10 @@
         "header": "top of the page",
         "PageTitle": "top left of the content page",
         "ProjectStarCTA": "top below pagetitle takes full width of the center section",
-        "InfoCard": "top below projectstarcta takes full width of the center section",
-        "Table": "mid of the center section takes full width of it",
-        "ChartCard1": "bottom left of the center section takes 1/2 width",
-        "ChartCard2": "bottom right of the center section takes 1/2 width"
+        "InfoCard": "mid takes full width of the center section",
+        "Table": "top below of the center section takes full width of it",
+        "ChartCard1": "bottom left above projectstarcta of the center section takes 1/2 width",
+        "ChartCard2": "bottom right above projectstarcta of the center section takes 1/2 width"
     },
     "functionality":
     {
