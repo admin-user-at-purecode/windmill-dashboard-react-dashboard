@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import InfoCard, { CTA } from '../../components/cards/InfoCard'
+import InfoCard, { ProjectStarCTA } from '../../components/cards/InfoCard'
 import ChartCard, { ChartLegend } from '../../components/chart/ChartCard'
 import { Doughnut, Line } from 'react-chartjs-2'
 import PageTitle, { RoundIcon } from '../../components/common/PageTitle'
@@ -48,6 +48,12 @@ function Dashboard() {
   return (
     <>
       <PageTitle>Dashboard</PageTitle>
+<<<<<<< HEAD
+=======
+
+      <ProjectStarCTA />
+
+>>>>>>> augmentation
       {/* <!-- Cards --> */}
       
       <TableContainer>
