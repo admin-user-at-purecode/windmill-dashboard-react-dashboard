@@ -33,11 +33,11 @@
         "sidebar": "left of the page, sticky",
         "header": "top of the page",
         "PageTitle": "top left of the content page",
-        "ProjectStarCTA": "top below pagetitle takes full width of the center section",
-        "InfoCard": "top below projectstarcta takes full width of the center section",
-        "Table": "mid of the center section takes full width of it",
-        "ChartCard1": "bottom left of the center section takes 1/2 width",
-        "ChartCard2": "bottom right of the center section takes 1/2 width"
+        "ProjectStarCTA": "bottom last of the center section takes full width",
+        "InfoCard": "bottom above projectstarcta takes full width of the center section",
+        "Table": "top below pagetitle of the center section takes full width of center section",
+        "ChartCard1": "mid left of the center section takes 1/2 width",
+        "ChartCard2": "mid right of the center section takes 1/2 width"
     },
     "functionality":
     {

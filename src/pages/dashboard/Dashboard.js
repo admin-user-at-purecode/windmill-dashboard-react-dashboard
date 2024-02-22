@@ -48,12 +48,7 @@ function Dashboard() {
   return (
     <>
       <PageTitle>Dashboard</PageTitle>
-<<<<<<< HEAD
-=======
 
-      <ProjectStarCTA />
-
->>>>>>> augmentation
       {/* <!-- Cards --> */}
       
       <TableContainer>
@@ -150,7 +145,7 @@ function Dashboard() {
           />
         </InfoCard>
       </div>
-      <CTA />
+      <ProjectStarCTA />
     </>
   )
 }
