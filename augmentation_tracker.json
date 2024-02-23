@@ -18,29 +18,47 @@
         "Table",
         "ChartCard"
     ],
-    "component_counts":
+    "component_counts":   
     {
-        "Header": 1,
-        "Sidebar": 1,
-        "PageTitle": 2,
-        "ProjectStarCTA": 1,
-        "InfoCard": 4,
-        "Table":1,
-        "ChartCard":2
-    },
-    "component_locations":   
-    {
-        "sidebar": "left of the page, sticky",
-        "header": "top of the page",
-        "PageTitle": "top left of the content page",
-        "ProjectStarCTA": "top below pagetitle takes full width of the center section",
-        "InfoCard": "top below projectstarcta takes full width of the center section",
-        "Table": "mid of the center section takes full width of it",
-        "ChartCard1": "bottom left of the center section takes 1/2 width",
-        "ChartCard2": "bottom right of the center section takes 1/2 width"
+        "Header" : {
+            "count": 1,
+            "location": "Top of the page",
+            "description": "Title, Search, dropdown in flex container"
+        },               
+        "Sidebar" : {
+            "count": 1,
+            "location": "left of the page",
+            "description": "List items in the conatiner"
+        },        
+        "PageTitle": {
+            "count": 2,
+            "location": "top  of main page",
+            "description": "Text in flex container"
+        },
+        "ProjectStarCTA":{
+            "count": 1,
+            "location": "bottom  of main page",
+            "description": "Icon, Link to redirect to github in flex container"
+        },
+        "InfoCard":{
+            "count": 4,
+            "location": "Top of the content page",
+            "description": "contains icon heading and count"
+        },
+        "Table":{
+            "count":1,
+            "location": "Mid section of main page",
+            "description": "a table with 10 rows and 4 columns containing names, amount, status, and date"
+        },
+        "Charts":{
+            "count":2,
+            "location": "bottom above title in the content page",
+            "description": "Graph, piechart of items"
+        }
     },
     "functionality":
     {
         "table_pagination": "a feature that allows the table to be paginated"
     }
+
 }
