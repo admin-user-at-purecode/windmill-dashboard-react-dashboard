@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
 import InfoCard, { ProjectStarCTA } from '../../components/cards/InfoCard'
-import ChartCard, { ChartLegend } from '../../components/chart/ChartCard'
-import { Doughnut, Line } from 'react-chartjs-2'
 import PageTitle, { RoundIcon } from '../../components/common/PageTitle'
 import { ChatIcon, CartIcon, MoneyIcon, PeopleIcon } from '../../assets/icons'
 import response from '../../mock_data/tableData'
@@ -18,13 +16,6 @@ import {
   Badge,
   Pagination,
 } from '@windmill/react-ui'
-
-import {
-  doughnutOptions,
-  lineOptions,
-  doughnutLegends,
-  lineLegends,
-} from '../../mock_data/chartsData'
 
 function Dashboard() {
   const [page, setPage] = useState(1)
@@ -134,19 +125,6 @@ function Dashboard() {
           />
         </TableFooter>
       </TableContainer>
-
-      <PageTitle>Charts</PageTitle>
-      <div className="grid gap-6 mb-8 md:grid-cols-2">
-        <ChartCard title="Revenue">
-          <Doughnut {...doughnutOptions} />
-          <ChartLegend legends={doughnutLegends} />
-        </ChartCard>
-
-        <ChartCard title="Traffic">
-          <Line {...lineOptions} />
-          <ChartLegend legends={lineLegends} />
-        </ChartCard>
-      </div>
     </>
   )
 }
