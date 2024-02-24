@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card, CardBody } from '@windmill/react-ui'
 
-
 export function ProjectStarCTA() {
   return (
     <a
