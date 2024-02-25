@@ -47,6 +47,7 @@ function Dashboard() {
   return (
     <>
       <PageTitle>Dashboard</PageTitle>
+      <PageTitle>Table</PageTitle>
       <TableContainer>
         <Table>
           <TableHeader>
