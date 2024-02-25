@@ -96,6 +96,7 @@ function Dashboard() {
           <ChartLegend legends={doughnutLegends} />
         </ChartCard>
       </div>
+      <PageTitle>Table</PageTitle>
       <TableContainer className="mb-10">
         <Table>
           <TableHeader>

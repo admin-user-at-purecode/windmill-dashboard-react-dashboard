@@ -13,7 +13,7 @@
         "Header",
         "Sidebar",
         "PageTitle",
-        "ProjectStarCTA",
+        "ProjectStarCTA",   
         "InfoCard",
         "Table",
         "ChartCard"
@@ -28,31 +28,38 @@
         "Sidebar" : {
             "count": 1,
             "location": "left of the page",
-            "description": "List items in the conatiner"
+            "description": "List items sub list items in the conatiner"
         },        
         "PageTitle": {
-            "count": 2,
-            "location": "top  of main page",
+            "count": 3,
+            "location": "top  of main page and content",
             "description": "Text in flex container"
         },
-        "ProjectStarCTA":{
+        "ProjectStarCTA": {
             "count": 1,
-            "location": "bottom  of main page",
-            "description": "Icon, Link to redirect to github in flex container"
-        },
+            "location": "bottom  of main page ",
+            "description": "Text in flex container"
+        },  
         "InfoCard":{
-            "count": 4,
-            "location": "Top of the content page",
-            "description": "contains icon heading and count"
+            "count":4,
+            "location": "top below pagetitle section of main content taking full width",
+            "description": "card with title, count and icon"
         },
         "Table":{
             "count":1,
-            "location": "bottom above projectStarcta in the content page ",
-            "description": "a table with 10 rows and 4 columns containing names, amount, status, and date"
+            "location": "Bottom above ProjectStarCTA section of main page",
+            "description": "a table with 10 rows and 4 columns containing names, amount, status, and date",
+            "children": {
+                "pagination": {
+                  "count": 1,
+                  "location": "bottom of the Table",
+                  "description": "a feature that allows the table to be paginated"
+                }
+            }
         },
-        "Charts":{
+        "ChartCard":{
             "count":2,
-            "location": "Mid section of main page",
+            "location": "Mid section of main page taking 1/2 1/2 of full width",
             "description": "Graph, piechart of items"
         }
     },
