@@ -48,6 +48,7 @@ function Dashboard() {
   return (
     <>
       <PageTitle>Dashboard</PageTitle>
+      <PageTitle>Table</PageTitle>
       <TableContainer className="mb-10">
         <Table>
           <TableHeader>
