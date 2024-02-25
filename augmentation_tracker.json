@@ -40,6 +40,11 @@
             "location": "top  of main page ",
             "description": "Text in flex container"
         },  
+        "InfoCard":{
+            "count":4,
+            "location": "top below projectstarcta section of main content taking full width",
+            "description": "card with title, count and icon"
+        },
         "Table":{
             "count":1,
             "location": "Mid section of main page",
