@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-
 import InfoCard, { ProjectStarCTA } from '../../components/cards/InfoCard'
 import ChartCard, { ChartLegend } from '../../components/chart/ChartCard'
 import { Doughnut, Line } from 'react-chartjs-2'
@@ -50,7 +49,7 @@ function Dashboard() {
       <PageTitle>Dashboard</PageTitle>
 
       {/* <!-- Cards --> */}
-      
+      <PageTitle>Table</PageTitle>
       <TableContainer>
         <Table>
           <TableHeader>
