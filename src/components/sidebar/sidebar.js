@@ -78,11 +78,11 @@ function Sidebar() {
         </a>
         <ul className="mt-6">
           {sidebardata.map((mainItem) =>
-            mainItem.sidebardata ? (
+           mainItem.icon === "PagesIcon" ? (
               <li key={mainItem.name} className="relative px-6 py-3">
                 <button
                   className="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                  onClick={() => handleDropdownMenuClick}
+                  onClick={handleDropdownMenuClick}
                   aria-haspopup="true"
                 >
                   <span className="inline-flex items-center">
