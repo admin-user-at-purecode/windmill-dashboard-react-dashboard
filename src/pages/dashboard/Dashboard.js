@@ -85,7 +85,7 @@ function Dashboard() {
           />
         </InfoCard>
       </div>
-
+      <PageTitle>Table</PageTitle>
       <TableContainer>
         <Table>
           <TableHeader>
