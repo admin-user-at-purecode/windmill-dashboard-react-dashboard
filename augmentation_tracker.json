@@ -37,12 +37,12 @@
         },
         "ProjectStarCTA": {
             "count": 1,
-            "location": "top  of main page ",
+            "location": "bottom of main page ",
             "description": "Text in flex container"
         },  
         "InfoCard":{
             "count":4,
-            "location": "top below projectstarcta section of main content taking full width",
+            "location": "top section of main content taking full width",
             "description": "card with title, count and icon"
         },
         "Table":{
@@ -59,7 +59,7 @@
         },
         "ChartCard":{
             "count":2,
-            "location": "Top below pagetitle in section of main page taking 1/2 of full width",
+            "location": "bottom above ProjectStarCTA in section of main page taking 1/2 1/2 of full width",
             "description": "Graph, piechart of items"
         }
     },
