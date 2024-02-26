@@ -13,12 +13,12 @@
         "Header",
         "Sidebar",
         "PageTitle",
-        "ProjectStarCTA",
+        "ProjectStarCTA",   
         "InfoCard",
         "Table",
         "ChartCard"
     ],
-    "component_counts":   
+    "component_counts":
     {
         "Header" : {
             "count": 1,
