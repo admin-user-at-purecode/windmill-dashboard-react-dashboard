@@ -49,7 +49,6 @@ function Dashboard() {
     <>
       <PageTitle>Dashboard</PageTitle>
 
-      <ProjectStarCTA />
 
       {/* <!-- Cards --> */}
       <div className="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
@@ -89,6 +88,22 @@ function Dashboard() {
           />
         </InfoCard>
       </div>
+
+      <ProjectStarCTA />
+
+      <PageTitle>Charts</PageTitle>
+      <div className="grid gap-6 mb-8 md:grid-cols-2">
+        <ChartCard title="Revenue">
+          <Doughnut {...doughnutOptions} />
+          <ChartLegend legends={doughnutLegends} />
+        </ChartCard>
+
+        <ChartCard title="Traffic">
+          <Line {...lineOptions} />
+          <ChartLegend legends={lineLegends} />
+        </ChartCard>
+      </div>
+
       <PageTitle>Table</PageTitle>
       <TableContainer>
         <Table>
@@ -135,18 +150,7 @@ function Dashboard() {
         </TableFooter>
       </TableContainer>
 
-      <PageTitle>Charts</PageTitle>
-      <div className="grid gap-6 mb-8 md:grid-cols-2">
-        <ChartCard title="Revenue">
-          <Doughnut {...doughnutOptions} />
-          <ChartLegend legends={doughnutLegends} />
-        </ChartCard>
 
-        <ChartCard title="Traffic">
-          <Line {...lineOptions} />
-          <ChartLegend legends={lineLegends} />
-        </ChartCard>
-      </div>
     </>
   )
 }
