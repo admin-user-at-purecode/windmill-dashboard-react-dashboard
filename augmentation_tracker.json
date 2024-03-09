@@ -46,7 +46,7 @@
             "description": "card with title, count and icon"
         },
         "Table":{
-            "count":1,
+            "count":2,
             "location": "Mid section of main page",
             "description": "a table with 10 rows and 4 columns containing names, amount, status, and date",
             "children": {
