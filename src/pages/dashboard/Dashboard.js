@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
-import InfoCard, { ProjectStarCTA } from '../../components/cards/InfoCard'
-import ChartCard, { ChartLegend } from '../../components/chart/ChartCard'
-import { Doughnut, Line } from 'react-chartjs-2'
-import PageTitle, { RoundIcon } from '../../components/common/PageTitle'
-import { ChatIcon, CartIcon, MoneyIcon, PeopleIcon } from '../../assets/icons'
-import response from '../../mock_data/tableData'
+import InfoCard, { ProjectStarCTA } from "../../components/cards/InfoCard";
+import ChartCard, { ChartLegend } from "../../components/chart/ChartCard";
+import { Doughnut, Line } from "react-chartjs-2";
+import PageTitle, { RoundIcon } from "../../components/common/PageTitle";
+import { ChatIcon, CartIcon, MoneyIcon, PeopleIcon } from "../../assets/icons";
+import response from "../../mock_data/tableData";
 import {
   TableBody,
   TableContainer,
@@ -17,33 +17,33 @@ import {
   Avatar,
   Badge,
   Pagination,
-} from '@windmill/react-ui'
+} from "@windmill/react-ui";
 
 import {
   doughnutOptions,
   lineOptions,
   doughnutLegends,
   lineLegends,
-} from '../../mock_data/chartsData'
+} from "../../mock_data/chartsData";
 
 function Dashboard() {
-  const [page, setPage] = useState(1)
-  const [data, setData] = useState([])
+  const [page, setPage] = useState(1);
+  const [data, setData] = useState([]);
 
   // pagination setup
-  const resultsPerPage = 10
-  const totalResults = response.length
+  const resultsPerPage = 10;
+  const totalResults = response.length;
 
   // pagination change control
   function onPageChange(p) {
-    setPage(p)
+    setPage(p);
   }
 
   // on page change, load new sliced data
   // here you would make another server request for new data
   useEffect(() => {
-    setData(response.slice((page - 1) * resultsPerPage, page * resultsPerPage))
-  }, [page])
+    setData(response.slice((page - 1) * resultsPerPage, page * resultsPerPage));
+  }, [page]);
 
   return (
     <>
@@ -89,6 +89,19 @@ function Dashboard() {
           />
         </InfoCard>
       </div>
+
+      <PageTitle>Charts</PageTitle>
+      <div className="grid gap-6 mb-8 md:grid-cols-2">
+        <ChartCard title="Revenue">
+          <Doughnut {...doughnutOptions} />
+          <ChartLegend legends={doughnutLegends} />
+        </ChartCard>
+
+        <ChartCard title="Traffic">
+          <Line {...lineOptions} />
+          <ChartLegend legends={lineLegends} />
+        </ChartCard>
+      </div>
       <PageTitle>Table</PageTitle>
       <TableContainer>
         <Table>
@@ -105,10 +118,16 @@ function Dashboard() {
               <TableRow key={i}>
                 <TableCell>
                   <div className="flex items-center text-sm">
-                    <Avatar className="hidden mr-3 md:block" src={user.avatar} alt="User image" />
+                    <Avatar
+                      className="hidden mr-3 md:block"
+                      src={user.avatar}
+                      alt="User image"
+                    />
                     <div>
                       <p className="font-semibold">{user.name}</p>
-                      <p className="text-xs text-gray-600 dark:text-gray-400">{user.job}</p>
+                      <p className="text-xs text-gray-600 dark:text-gray-400">
+                        {user.job}
+                      </p>
                     </div>
                   </div>
                 </TableCell>
@@ -119,7 +138,9 @@ function Dashboard() {
                   <Badge type={user.status}>{user.status}</Badge>
                 </TableCell>
                 <TableCell>
-                  <span className="text-sm">{new Date(user.date).toLocaleDateString()}</span>
+                  <span className="text-sm">
+                    {new Date(user.date).toLocaleDateString()}
+                  </span>
                 </TableCell>
               </TableRow>
             ))}
@@ -134,21 +155,8 @@ function Dashboard() {
           />
         </TableFooter>
       </TableContainer>
-
-      <PageTitle>Charts</PageTitle>
-      <div className="grid gap-6 mb-8 md:grid-cols-2">
-        <ChartCard title="Revenue">
-          <Doughnut {...doughnutOptions} />
-          <ChartLegend legends={doughnutLegends} />
-        </ChartCard>
-
-        <ChartCard title="Traffic">
-          <Line {...lineOptions} />
-          <ChartLegend legends={lineLegends} />
-        </ChartCard>
-      </div>
     </>
-  )
+  );
 }
 
-export default Dashboard
+export default Dashboard;
