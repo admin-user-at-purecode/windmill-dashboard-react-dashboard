@@ -41,7 +41,7 @@
             "description": "Text in flex container"
         },  
         "InfoCard":{
-            "count":4,
+            "count":8,
             "location": "top below projectstarcta section of main content taking full width",
             "description": "card with title, count and icon"
         },
