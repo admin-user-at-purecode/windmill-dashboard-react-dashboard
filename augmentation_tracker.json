@@ -42,12 +42,12 @@
         },  
         "InfoCard":{
             "count":4,
-            "location": "top below projectstarcta section of main content taking full width",
+            "location": "below the ChartCard",
             "description": "card with title, count and icon"
         },
         "Table":{
             "count":1,
-            "location": "Mid section of main page",
+            "location": "at the bottom of the page",
             "description": "a table with 10 rows and 4 columns containing names, amount, status, and date",
             "children": {
                 "pagination": {
@@ -59,7 +59,7 @@
         },
         "ChartCard":{
             "count":2,
-            "location": "Top below pagetitle in section of main page taking 1/2 of full width",
+            "location": "below the ProjectStarCTA",
             "description": "Graph, piechart of items"
         }
     },
