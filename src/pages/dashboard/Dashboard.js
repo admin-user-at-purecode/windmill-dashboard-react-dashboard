@@ -142,10 +142,6 @@ function Dashboard() {
           <ChartLegend legends={doughnutLegends} />
         </ChartCard>
 
-        <ChartCard title="Traffic">
-          <Line {...lineOptions} />
-          <ChartLegend legends={lineLegends} />
-        </ChartCard>
       </div>
     </>
   )

@@ -58,7 +58,7 @@
             }
         },
         "ChartCard":{
-            "count":2,
+            "count":1,
             "location": "Top below pagetitle in section of main page taking 1/2 of full width",
             "description": "Graph, piechart of items"
         }
