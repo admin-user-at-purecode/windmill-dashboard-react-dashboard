@@ -37,12 +37,12 @@
         },
         "ProjectStarCTA": {
             "count": 1,
-            "location": "top  of main page ",
+            "location": "below the InfoCard",
             "description": "Text in flex container"
         },  
         "InfoCard":{
-            "count":4,
-            "location": "top below projectstarcta section of main content taking full width",
+            "count":8,
+            "location": "below the PageTitle",
             "description": "card with title, count and icon"
         },
         "Table":{
