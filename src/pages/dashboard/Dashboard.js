@@ -13,10 +13,8 @@ import {
   TableHeader,
   TableCell,
   TableRow,
-  TableFooter,
   Avatar,
   Badge,
-  Pagination,
 } from '@windmill/react-ui'
 
 import {
@@ -125,14 +123,7 @@ function Dashboard() {
             ))}
           </TableBody>
         </Table>
-        <TableFooter>
-          <Pagination
-            totalResults={totalResults}
-            resultsPerPage={resultsPerPage}
-            label="Table navigation"
-            onChange={onPageChange}
-          />
-        </TableFooter>
+
       </TableContainer>
 
       <PageTitle>Charts</PageTitle>
