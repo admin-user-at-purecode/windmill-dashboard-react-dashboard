@@ -136,7 +136,7 @@ function Dashboard() {
       </TableContainer>
 
       <PageTitle>Charts</PageTitle>
-      <div className="grid gap-6 mb-8 md:grid-cols-2">
+      <div className="grid gap-6 mb-8 ">
         <ChartCard title="Revenue">
           <Doughnut {...doughnutOptions} />
           <ChartLegend legends={doughnutLegends} />
