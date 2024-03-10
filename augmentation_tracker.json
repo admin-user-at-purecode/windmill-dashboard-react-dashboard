@@ -66,5 +66,6 @@
     "functionality":
     {
         "table_pagination": "a feature that allows the table to be paginated"
-    }
+    },
+    "screen_and_layout_augmentations":["Removed Light and Dark theme functionality from Header"]
 }
