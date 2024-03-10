@@ -6,6 +6,7 @@ import { Doughnut, Line } from 'react-chartjs-2'
 import PageTitle, { RoundIcon } from '../../components/common/PageTitle'
 import { ChatIcon, CartIcon, MoneyIcon, PeopleIcon } from '../../assets/icons'
 import response from '../../mock_data/tableData'
+
 import {
   TableBody,
   TableContainer,
