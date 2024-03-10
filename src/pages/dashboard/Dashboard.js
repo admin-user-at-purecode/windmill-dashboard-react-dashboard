@@ -52,7 +52,7 @@ function Dashboard() {
       <ProjectStarCTA />
 
       {/* <!-- Cards --> */}
-      <div className="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-6 mb-8 xl:grid-cols-2">
         <InfoCard title="Total clients" value="6389">
           <RoundIcon
             icon={PeopleIcon}
@@ -71,14 +71,6 @@ function Dashboard() {
           />
         </InfoCard>
 
-        <InfoCard title="New sales" value="376">
-          <RoundIcon
-            icon={CartIcon}
-            iconColorClass="text-blue-500 dark:text-blue-100"
-            bgColorClass="bg-blue-100 dark:bg-blue-500"
-            className="mr-4"
-          />
-        </InfoCard>
 
         <InfoCard title="Pending contacts" value="35">
           <RoundIcon
