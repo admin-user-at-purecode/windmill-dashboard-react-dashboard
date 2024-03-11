@@ -16,7 +16,8 @@
         "ProjectStarCTA",   
         "InfoCard",
         "Table",
-        "ChartCard"
+        "ChartCard",
+        "cardWithHeading"
     ],
     "component_counts":   
     {
@@ -45,6 +46,12 @@
             "location": "top below projectstarcta section of main content taking full width",
             "description": "card with title, count and icon"
         },
+        "cardWithHeading":{
+            "count": 2,
+            "location": "below the Table",
+            "description": "contains heading and text"
+        },
+
         "Table":{
             "count":1,
             "location": "Mid section of main page",
