@@ -60,7 +60,7 @@
         },
         "fullWidthCard":{
             "count":1,
-            "location": "below the CTA",
+            "location": "below the ProjectStarCTA",
             "description":"contains text"
         },
         "ChartCard":{
