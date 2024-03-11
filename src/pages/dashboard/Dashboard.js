@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
-import InfoCard, { ProjectStarCTA } from '../../components/cards/InfoCard'
-import ChartCard, { ChartLegend } from '../../components/chart/ChartCard'
-import { Doughnut, Line } from 'react-chartjs-2'
-import PageTitle, { RoundIcon } from '../../components/common/PageTitle'
-import { ChatIcon, CartIcon, MoneyIcon, PeopleIcon } from '../../assets/icons'
-import response from '../../mock_data/tableData'
+import InfoCard, { ProjectStarCTA } from "../../components/cards/InfoCard";
+import ChartCard, { ChartLegend } from "../../components/chart/ChartCard";
+import { Doughnut, Line } from "react-chartjs-2";
+import PageTitle, { RoundIcon } from "../../components/common/PageTitle";
+import { ChatIcon, CartIcon, MoneyIcon, PeopleIcon } from "../../assets/icons";
+import response from "../../mock_data/tableData";
 import {
   TableBody,
   TableContainer,
@@ -17,33 +17,36 @@ import {
   Avatar,
   Badge,
   Pagination,
-} from '@windmill/react-ui'
+  Label,
+  Input,
+  HelperText
+} from "@windmill/react-ui";
 
 import {
   doughnutOptions,
   lineOptions,
   doughnutLegends,
   lineLegends,
-} from '../../mock_data/chartsData'
+} from "../../mock_data/chartsData";
 
 function Dashboard() {
-  const [page, setPage] = useState(1)
-  const [data, setData] = useState([])
+  const [page, setPage] = useState(1);
+  const [data, setData] = useState([]);
 
   // pagination setup
-  const resultsPerPage = 10
-  const totalResults = response.length
+  const resultsPerPage = 10;
+  const totalResults = response.length;
 
   // pagination change control
   function onPageChange(p) {
-    setPage(p)
+    setPage(p);
   }
 
   // on page change, load new sliced data
   // here you would make another server request for new data
   useEffect(() => {
-    setData(response.slice((page - 1) * resultsPerPage, page * resultsPerPage))
-  }, [page])
+    setData(response.slice((page - 1) * resultsPerPage, page * resultsPerPage));
+  }, [page]);
 
   return (
     <>
@@ -89,6 +92,9 @@ function Dashboard() {
           />
         </InfoCard>
       </div>
+
+
+
       <PageTitle>Table</PageTitle>
       <TableContainer>
         <Table>
@@ -105,10 +111,16 @@ function Dashboard() {
               <TableRow key={i}>
                 <TableCell>
                   <div className="flex items-center text-sm">
-                    <Avatar className="hidden mr-3 md:block" src={user.avatar} alt="User image" />
+                    <Avatar
+                      className="hidden mr-3 md:block"
+                      src={user.avatar}
+                      alt="User image"
+                    />
                     <div>
                       <p className="font-semibold">{user.name}</p>
-                      <p className="text-xs text-gray-600 dark:text-gray-400">{user.job}</p>
+                      <p className="text-xs text-gray-600 dark:text-gray-400">
+                        {user.job}
+                      </p>
                     </div>
                   </div>
                 </TableCell>
@@ -119,7 +131,9 @@ function Dashboard() {
                   <Badge type={user.status}>{user.status}</Badge>
                 </TableCell>
                 <TableCell>
-                  <span className="text-sm">{new Date(user.date).toLocaleDateString()}</span>
+                  <span className="text-sm">
+                    {new Date(user.date).toLocaleDateString()}
+                  </span>
                 </TableCell>
               </TableRow>
             ))}
@@ -147,8 +161,31 @@ function Dashboard() {
           <ChartLegend legends={lineLegends} />
         </ChartCard>
       </div>
+
+      <PageTitle>Validation</PageTitle>
+      <div className="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800 validationForm">
+        <Label className="input">
+          <span>Invalid input</span>
+          <Input className="mt-1" valid={false} placeholder="Jane Doe" />
+          <HelperText valid={false}>Your password is too short.</HelperText>
+        </Label>
+
+        <Label className="mt-4 input">
+          <span>Valid input</span>
+          <Input className="mt-1" valid={true} placeholder="Jane Doe" />
+          <HelperText valid={true}>Your password is strong.</HelperText>
+        </Label>
+
+        <Label className="mt-4 input">
+          <span>Helper text</span>
+          <Input className="mt-1" placeholder="Jane Doe" />
+          <HelperText>
+            Your password must be at least 6 characters long.
+          </HelperText>
+        </Label>
+      </div>
     </>
-  )
+  );
 }
 
-export default Dashboard
+export default Dashboard;
