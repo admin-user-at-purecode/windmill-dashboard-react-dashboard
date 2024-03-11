@@ -16,7 +16,8 @@
         "ProjectStarCTA",   
         "InfoCard",
         "Table",
-        "ChartCard"
+        "ChartCard",
+        "fullWidthCard"
     ],
     "component_counts":   
     {
@@ -42,7 +43,7 @@
         },  
         "InfoCard":{
             "count":4,
-            "location": "top below projectstarcta section of main content taking full width",
+            "location": "below the fullWidthCard",
             "description": "card with title, count and icon"
         },
         "Table":{
@@ -56,6 +57,11 @@
                   "description": "a feature that allows the table to be paginated"
                 }
             }
+        },
+        "fullWidthCard":{
+            "count":2,
+            "location": "below the ProjectStarCTA",
+            "description":"contains text"
         },
         "ChartCard":{
             "count":2,
