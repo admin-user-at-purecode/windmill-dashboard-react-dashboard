@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
-import InfoCard, { ProjectStarCTA } from '../../components/cards/InfoCard'
-import ChartCard, { ChartLegend } from '../../components/chart/ChartCard'
-import { Doughnut, Line } from 'react-chartjs-2'
-import PageTitle, { RoundIcon } from '../../components/common/PageTitle'
-import { ChatIcon, CartIcon, MoneyIcon, PeopleIcon } from '../../assets/icons'
-import response from '../../mock_data/tableData'
+import InfoCard, { ProjectStarCTA } from "../../components/cards/InfoCard";
+import ChartCard, { ChartLegend } from "../../components/chart/ChartCard";
+import { Doughnut, Line } from "react-chartjs-2";
+import PageTitle, { RoundIcon } from "../../components/common/PageTitle";
+import { ChatIcon, CartIcon, MoneyIcon, PeopleIcon } from "../../assets/icons";
+import response from "../../mock_data/tableData";
 import {
   TableBody,
   TableContainer,
@@ -17,33 +17,37 @@ import {
   Avatar,
   Badge,
   Pagination,
-} from '@windmill/react-ui'
+  Label,
+  Input,
+  Select,
+  Textarea
+} from "@windmill/react-ui";
 
 import {
   doughnutOptions,
   lineOptions,
   doughnutLegends,
   lineLegends,
-} from '../../mock_data/chartsData'
+} from "../../mock_data/chartsData";
 
 function Dashboard() {
-  const [page, setPage] = useState(1)
-  const [data, setData] = useState([])
+  const [page, setPage] = useState(1);
+  const [data, setData] = useState([]);
 
   // pagination setup
-  const resultsPerPage = 10
-  const totalResults = response.length
+  const resultsPerPage = 10;
+  const totalResults = response.length;
 
   // pagination change control
   function onPageChange(p) {
-    setPage(p)
+    setPage(p);
   }
 
   // on page change, load new sliced data
   // here you would make another server request for new data
   useEffect(() => {
-    setData(response.slice((page - 1) * resultsPerPage, page * resultsPerPage))
-  }, [page])
+    setData(response.slice((page - 1) * resultsPerPage, page * resultsPerPage));
+  }, [page]);
 
   return (
     <>
@@ -89,6 +93,82 @@ function Dashboard() {
           />
         </InfoCard>
       </div>
+
+      <PageTitle>Elements</PageTitle>
+
+      <div className="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800 microInteractionsContainer">
+        <Label className="nameInput">
+          <span>Name</span>
+          <Input className="mt-1" placeholder="Jane Doe" />
+        </Label>
+
+        <Label className="mt-4 nameInput">
+          <span>Disabled</span>
+          <Input disabled className="mt-1" placeholder="Jane Doe" />
+        </Label>
+
+        <div className="mt-4">
+          {/* TODO: Check if this label is accessible, or fallback */}
+          {/* <span className="text-sm text-gray-700 dark:text-gray-400">Account Type</span> */}
+          <Label>Account Type</Label>
+          <div className="mt-2 radioGroup">
+            <Label radio>
+              <Input type="radio" value="personal" name="accountType" />
+              <span className="ml-2">Personal</span>
+            </Label>
+            <Label className="ml-6" radio>
+              <Input type="radio" value="business" name="accountType" />
+              <span className="ml-2">Business</span>
+            </Label>
+            <Label disabled className="ml-6" radio>
+              <Input
+                disabled
+                type="radio"
+                value="disabled"
+                name="accountType"
+              />
+              <span className="ml-2">Disabled</span>
+            </Label>
+          </div>
+        </div>
+
+        <Label className="mt-4 select">
+          <span>Requested Limit</span>
+          <Select className="mt-1">
+            <option>$1,000</option>
+            <option>$5,000</option>
+            <option>$10,000</option>
+            <option>$25,000</option>
+          </Select>
+        </Label>
+
+        <Label className="mt-4 multiselect">
+          <span>Multiselect</span>
+          <Select className="mt-1" multiple>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+            <option>Option 4</option>
+            <option>Option 5</option>
+          </Select>
+        </Label>
+
+        <Label className="mt-4 textarea">
+          <span>Message</span>
+          <Textarea
+            className="mt-1"
+            rows="3"
+            placeholder="Enter some long form content."
+          />
+        </Label>
+
+        <Label className="mt-6 checkbox" check>
+          <Input type="checkbox" />
+          <span className="ml-2">
+            I agree to the <span className="underline">privacy policy</span>
+          </span>
+        </Label>
+      </div>
       <PageTitle>Table</PageTitle>
       <TableContainer>
         <Table>
@@ -105,10 +185,16 @@ function Dashboard() {
               <TableRow key={i}>
                 <TableCell>
                   <div className="flex items-center text-sm">
-                    <Avatar className="hidden mr-3 md:block" src={user.avatar} alt="User image" />
+                    <Avatar
+                      className="hidden mr-3 md:block"
+                      src={user.avatar}
+                      alt="User image"
+                    />
                     <div>
                       <p className="font-semibold">{user.name}</p>
-                      <p className="text-xs text-gray-600 dark:text-gray-400">{user.job}</p>
+                      <p className="text-xs text-gray-600 dark:text-gray-400">
+                        {user.job}
+                      </p>
                     </div>
                   </div>
                 </TableCell>
@@ -119,7 +205,9 @@ function Dashboard() {
                   <Badge type={user.status}>{user.status}</Badge>
                 </TableCell>
                 <TableCell>
-                  <span className="text-sm">{new Date(user.date).toLocaleDateString()}</span>
+                  <span className="text-sm">
+                    {new Date(user.date).toLocaleDateString()}
+                  </span>
                 </TableCell>
               </TableRow>
             ))}
@@ -148,7 +236,7 @@ function Dashboard() {
         </ChartCard>
       </div>
     </>
-  )
+  );
 }
 
-export default Dashboard
+export default Dashboard;
