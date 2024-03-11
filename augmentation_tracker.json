@@ -17,7 +17,7 @@
         "InfoCard",
         "Table",
         "ChartCard",
-        "inputWithButtonContainer"
+        "fullWidthCard"
     ],
     "component_counts":   
     {
@@ -43,20 +43,8 @@
         },  
         "InfoCard":{
             "count":4,
-            "location": "below the inputWithButtonContainer",
+            "location": "below the ProjectStarCTA",
             "description": "card with title, count and icon"
-        },
-        "inputWithButtonContainer":{
-            "count":1,
-            "location":"below the ProjectStarCTA",
-            "description":"contains input with buttons",
-            "children":{
-                "inputWithButton":{
-                    "count":2,
-                    "location":"all two inputs placed one below another",
-                    "description":"contains input and button"
-                }
-            }
         },
         "Table":{
             "count":1,
@@ -69,6 +57,11 @@
                   "description": "a feature that allows the table to be paginated"
                 }
             }
+        },
+        "fullWidthCard":{
+            "count":1,
+            "location": "at the bottom of the page",
+            "description":"contains text"
         },
         "ChartCard":{
             "count":2,
