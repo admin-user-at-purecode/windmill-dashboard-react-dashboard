@@ -17,6 +17,7 @@ import {
   Avatar,
   Badge,
   Pagination,
+  Label
 } from '@windmill/react-ui'
 
 import {
@@ -50,6 +51,35 @@ function Dashboard() {
       <PageTitle>Dashboard</PageTitle>
 
       <ProjectStarCTA />
+
+      
+      <div className="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800 inputWithButtonContainer">
+        <Label className="inputWithButton">
+          <span>Button left</span>
+          <div className="relative">
+            <input
+              className="block w-full pl-20 mt-1 text-sm dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+              placeholder="Jane Doe"
+            />
+            <button className="absolute inset-y-0 px-4 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-l-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray">
+              Click
+            </button>
+          </div>
+        </Label>
+
+        <Label className="mt-4 inputWithButton">
+          <span>Button right</span>
+          <div className="relative text-gray-500 focus-within:text-purple-600">
+            <input
+              className="block w-full pr-20 mt-1 text-sm text-black dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
+              placeholder="Jane Doe"
+            />
+            <button className="absolute inset-y-0 right-0 px-4 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-r-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+              Click
+            </button>
+          </div>
+        </Label>
+      </div>
 
       {/* <!-- Cards --> */}
       <div className="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
@@ -147,6 +177,7 @@ function Dashboard() {
           <ChartLegend legends={lineLegends} />
         </ChartCard>
       </div>
+
     </>
   )
 }
