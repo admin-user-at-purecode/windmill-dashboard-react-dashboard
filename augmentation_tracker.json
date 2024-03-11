@@ -48,7 +48,7 @@
         },
         "microInteractionsContainer":{
             "count":1,
-            "location":"below the CTA",
+            "location":"below the InfoCard",
             "description":"contains inputs, radiogroup, select, multiselect, textarea and checkbox",
             "children":{
                 "nameInput":{
