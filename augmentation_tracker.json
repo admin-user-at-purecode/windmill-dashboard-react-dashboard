@@ -16,7 +16,8 @@
         "ProjectStarCTA",   
         "InfoCard",
         "Table",
-        "ChartCard"
+        "ChartCard",
+        "inputWithIconContainer"
     ],
     "component_counts":   
     {
@@ -61,7 +62,19 @@
             "count":2,
             "location": "Top below pagetitle in section of main page taking 1/2 of full width",
             "description": "Graph, piechart of items"
-        }
+        },
+        "inputWithIconContainer":{
+            "count":1,
+            "location":"below the ChartCard",
+            "description":"contains input with icons",
+            "children":{
+                "inputWithIcon":{
+                    "count":2,
+                    "location":"all two inputs placed one below another",
+                    "description":"contains input and icon"
+                }
+            }
+        },
     },
     "functionality":
     {
