@@ -16,7 +16,8 @@
         "ProjectStarCTA",   
         "InfoCard",
         "Table",
-        "ChartCard"
+        "ChartCard",
+        "validationForm"
     ],
     "component_counts":   
     {
@@ -44,6 +45,18 @@
             "count":4,
             "location": "top below projectstarcta section of main content taking full width",
             "description": "card with title, count and icon"
+        },
+        "validationForm":{
+            "count":1,
+            "location":"below the InfoCard",
+            "description":"contains three validation inputs",
+            "children":{
+                "input":{
+                    "count":3,
+                    "location":"all three inputs placed one below another",
+                    "description":"contains label and input"
+                }
+            }
         },
         "Table":{
             "count":1,
