@@ -16,7 +16,8 @@
         "ProjectStarCTA",   
         "InfoCard",
         "Table",
-        "ChartCard"
+        "ChartCard",
+        "microInteractionsContainer"
     ],
     "component_counts":   
     {
@@ -42,9 +43,44 @@
         },  
         "InfoCard":{
             "count":4,
-            "location": "top below projectstarcta section of main content taking full width",
+            "location": "below the microInteractionsContainer",
             "description": "card with title, count and icon"
         },
+        "microInteractionsContainer":{
+            "count":1,
+            "location":"below the ProjectStarCTA",
+            "description":"contains inputs, radiogroup, select, multiselect, textarea and checkbox",
+            "children":{
+                "nameInput":{
+                    "count":2,
+                    "location":"at the top in conatiner",
+                    "description":"input with label"
+                },
+                "radioGroup":{
+                    "count":1,
+                    "location":"below the input",
+                    "description":"contains three Label elements which has radio inputs with respective span for each"
+                },
+                "select":{
+                    "count":1,
+                    "location":"below the radioGroup",
+                },
+                "multiselect":{
+                    "count":1,
+                    "location":"below the select"
+                },
+                "textarea":{
+                    "count":1,
+                    "location":"below the multiselect"
+                },
+                "checkbox":{
+                    "count":1,
+                    "location":"bottom of the container"
+                }
+  
+            }
+        },
+      
         "Table":{
             "count":1,
             "location": "Mid section of main page",
@@ -67,4 +103,4 @@
     {
         "table_pagination": "a feature that allows the table to be paginated"
     }
-}
+  }
