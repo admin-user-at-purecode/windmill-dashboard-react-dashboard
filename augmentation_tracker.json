@@ -43,7 +43,7 @@
         },  
         "InfoCard":{
             "count":4,
-            "location": "top below projectstarcta section of main content taking full width",
+            "location": "top below inputWithIconContainer section of main content taking full width",
             "description": "card with title, count and icon"
         },
         "Table":{
