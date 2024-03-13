@@ -78,11 +78,11 @@ function Sidebar() {
         </a>
         <ul className="mt-6">
           {sidebardata.map((mainItem) =>
-            mainItem.sidebardata ? (
+            mainItem.icon === "PagesIcon" ? (
               <li key={mainItem.name} className="relative px-6 py-3">
                 <button
                   className="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                  onClick={() => handleDropdownMenuClick}
+                  onClick={handleDropdownMenuClick}
                   aria-haspopup="true"
                 >
                   <span className="inline-flex items-center">
@@ -122,14 +122,13 @@ function Sidebar() {
             ) : (
               <li className="relative px-6 py-3" key={mainItem.name}>
                 <p
-                
                   className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                   activeClassName="text-gray-800 dark:text-gray-100"
                 >
-                    <span
-                      className="absolute inset-y-0 left-0 w-1 rounded-tr-lg rounded-br-lg"
-                      aria-hidden="true"
-                    ></span>
+                  <span
+                    className="absolute inset-y-0 left-0 w-1 rounded-tr-lg rounded-br-lg"
+                    aria-hidden="true"
+                  ></span>
                   <Icon
                     className="w-5 h-5"
                     aria-hidden="true"

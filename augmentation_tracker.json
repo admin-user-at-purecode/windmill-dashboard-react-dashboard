@@ -14,7 +14,8 @@
         "Sidebar",
         "PageTitle",
         "InfoCard",
-        "ChartCard"
+        "ChartCard",
+        "ProjectStarCTA"
     ],
     "component_counts":   
     {
@@ -33,6 +34,12 @@
             "location": "top  of main page and content",
             "description": "Text in flex container"
         },
+        
+        "ProjectStarCTA": {
+            "count": 1,
+            "location": "top  of main page ",
+            "description": "Text in flex container"
+        }, 
         "InfoCard":{
             "count": 4,
             "location": "top below pagetitle in the content page ",
